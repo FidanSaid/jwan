@@ -1,0 +1,17 @@
+<%= form_for(@jwan) do |f| %>
+  <% if @jwan.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@jwan.errors.count, "error") %> prohibited this jwan from being saved:</h2>
+
+      <ul>
+      <% @jwan.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
